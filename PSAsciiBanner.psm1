@@ -2,8 +2,8 @@ Function Set-AsciiBanner {
     param (
         [string]$Banner
     )
-    $Phrases = Get-Content "$($Env:PSModulePath.split(';')[0])\AsciiBanner\Phrases\phrases.txt"
-    $BannerPath = "$($Env:PSModulePath.split(';')[0])\AsciiBanner\Banners\"
+    $Phrases = Get-Content "$($Env:PSModulePath.split(';')[0])\PSAsciiBanner\Phrases\phrases.txt"
+    $BannerPath = "$($Env:PSModulePath.split(';')[0])\PSAsciiBanner\Banners\"
     if (!$Banner) {
         $BannerList = @()
         foreach ($b in $(Get-ChildItem $BannerPath)) {
